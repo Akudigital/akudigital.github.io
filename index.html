@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AkuDigital Portfolio</title>
 
-    <!-- Import Intel Font (Ensure it's properly linked) -->
+    <!-- Import Intel Font -->
     <style>
         @font-face {
             font-family: "Intel";
@@ -36,20 +36,15 @@
         }
 
         .hero-text {
-            width: 50%;
+            width: 55%;
             padding-left: 50px;
+            max-width: 600px;
         }
 
         .hero h1 {
             font-size: 70px;
             font-weight: bold;
             line-height: 77px;
-        }
-
-        .hero p {
-            font-size: 24px;
-            line-height: 1.6;
-            max-width: 600px;
         }
 
         .hero img {
@@ -73,7 +68,7 @@
         .container {
             max-width: 1000px;
             background: white;
-            padding: 40px;
+            padding: 50px 20px;
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
             margin: auto;
@@ -84,7 +79,7 @@
         }
 
         .container h2 {
-            font-size: 50px;
+            font-size: 60px;
             font-weight: bold;
             color: #070ADA;
             margin-bottom: 20px;
@@ -96,23 +91,6 @@
             max-width: 900px;
             margin: auto;
             line-height: 1.5;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #99E40A;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
-            font-size: 20px;
-        }
-
-        .btn:hover {
-            background-color: #820FC2;
-            color: white;
         }
 
         /* Portfolio Section */
@@ -145,6 +123,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .service {
@@ -199,6 +178,34 @@
             background-color: #070ADA;
             color: white;
         }
+
+        /* Mobile Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px;
+            }
+
+            .hero-text {
+                width: 100%;
+                padding: 0;
+            }
+
+            .hero img {
+                width: 80%;
+                margin-top: 20px;
+            }
+
+            .hero-placeholder {
+                display: none;
+            }
+
+            .service {
+                width: 90%;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -206,7 +213,7 @@
     <div class="hero">
         <div class="hero-text">
             <h1>Welcome to AkuDigital Github Space</h1>
-                    </div>
+        </div>
         <div class="hero-placeholder"></div>
         <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
     </div>
@@ -217,7 +224,10 @@
         <p>I am Anyaku Alicho Onyebuchi, a Digital Innovator & AI Strategist.  
            I explore the intersection of AI, digital transformation, and automation,  
            turning complex ideas into scalable digital solutions.  
-           <br><br>Building with AI. Innovating with Purpose. Creating Digital Impact.</p>
+          </p>
+    </div>
+          
+           <br><br>Building with AI. Innovating with Purpose. Creating Digital Impact. underline with lemon colour </p>
     </div>
 
     <!-- My Work Section -->
