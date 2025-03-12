@@ -76,9 +76,8 @@
             font-size: 20px;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid #070ADA;
             display: inline-block;
-            animation: typing 4s steps(50, end) forwards, blink 0.8s infinite;
+            animation: typing 6s steps(60, end) forwards;
         }
 
         .highlight-blue { color: #070ADA; }
@@ -89,6 +88,25 @@
             padding: 50px;
             background: #f4f4f4;
             text-align: center;
+        }
+
+        .cv-header {
+            font-size: 28px;
+            font-weight: bold;
+            color: #070ADA;
+            margin-bottom: 20px;
+        }
+
+        .cv-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            border-left: 5px solid;
+            border-image: linear-gradient(to bottom, #070ADA, #820FC2);
+            border-image-slice: 1;
+            padding-left: 20px;
         }
 
         .cv-section a {
@@ -111,10 +129,6 @@
             from { width: 0; }
             to { width: 100%; }
         }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
     </style>
 </head>
 <body>
@@ -136,9 +150,28 @@
     </div>
 
     <div class="cv-section">
-        <h2>Download My CV</h2>
-        <p>Want to collaborate or learn more about my expertise? Download my CV below.</p>
-        <a href="cv.pdf" download>Download CV</a>
+        <h2 class="cv-header">My Resume</h2>
+        <div class="cv-content">
+            <p><strong>Experience:</strong><br>
+                - Founder & Research Lead at Pevopod<br>
+                - Founder & Digital Strategist at Anyaku Alicho Limited (since 2020)<br>
+                - AI & Business Strategist | Digital Transformation Expert<br>
+                - Strategic Business Leadership and Automation</p>
+            <p><strong>Education:</strong><br>
+                - MSc International Business, MBA<br>
+                - Certificate in Master Digital Transformation</p>
+            <p><strong>Skills:</strong><br>
+                - AI Development | Business Automation | Digital Product Development<br>
+                - Research & Policy Analysis | Strategic Business Leadership<br>
+                - UI/UX Design | Data Analytics</p>
+            <p><strong>Projects:</strong><br>
+                - Pevopod: AI-driven digital engagement platform for policy and research insights.<br>
+                - Digital Banking Strategy: Led digital adoption & automation for financial services.<br>
+                - AI-powered Market Research Tools: Built solutions for strategic decision-making.<br>
+                - Digital Branding & UX Projects: Developed interactive and accessible digital spaces.</p>
+        </div>
+        <br>
+        <a href="cv.pdf" download>Download Full CV</a>
     </div>
 </body>
 </html>
