@@ -62,57 +62,70 @@
             z-index: 1;
         }
 
-        .profile-card {
+        .services {
+            padding: 60px;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            color: white;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service {
             background: white;
-            width: 350px;
+            color: black;
             padding: 20px;
             border-radius: 10px;
+            width: 45%;
             text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin: auto;
-            margin-top: 20px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+            margin: 10px;
         }
 
-        .profile-card h2 {
-            margin-bottom: 5px;
-            color: #070ADA;
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
         }
 
-        .profile-card p {
-            color: #555;
-            font-size: 16px;
-            margin: 10px 0;
-        }
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px;
+            }
 
-        .profile-card .follow-btn {
-            background: #820FC2;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-top: 10px;
-        }
+            .hero-text {
+                width: 100%;
+                padding: 0;
+            }
 
-        .profile-card .follow-btn:hover {
-            background: #070ADA;
-        }
+            .hero img {
+                width: 80%;
+                margin-top: 20px;
+            }
 
-        .social-links {
-            margin-top: 15px;
-            font-size: 18px;
-        }
+            .hero-placeholder {
+                display: none;
+            }
 
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 20px;
-        }
-
-        .social-links a:hover {
-            color: #070ADA;
+            .service {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -125,51 +138,32 @@
         <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
     </div>
 
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am <strong>Anyaku Alicho Onyebuchi</strong>, a <strong>Digital Innovator & AI Strategist</strong> passionate about leveraging technology to solve complex problems.<br>
-        With expertise in <strong>AI, digital transformation, and automation</strong>, I build scalable solutions that drive efficiency and impact.<br>
-        My mission is to bridge the gap between innovation and real-world applications, helping businesses and individuals thrive in a digital-first world.</p>
-        <p><em>Building with AI. Innovating with Purpose. Creating Digital Impact.</em></p>
-    </div>
-
-    <div class="profile-card">
-        <h2>Follow My Work</h2>
-        <p>Stay connected and explore my latest projects:</p>
-        <button class="follow-btn" onclick="window.location.href='https://www.instagram.com/gospelmissions/'">Follow Gospel Missions & Relations</button>
-        <div class="social-links">
-            🌐 <a href="https://akudigital.github.io">Website</a><br>
-            🔗 <a href="https://linkedin.com/in/yourprofile">LinkedIn</a><br>
-            📂 <a href="https://pevopod.com">Pevopod Development</a>
-        </div>
-    </div>
-
     <div class="services">
         <h2>The Services I Offer</h2>
         <div class="service-box">
             <div class="service">
                 <h3>AI Development</h3>
-                <p>Building AI-powered tools for businesses.</p>
+                <p>Creating AI-powered solutions to enhance business operations and automation.</p>
             </div>
             <div class="service">
                 <h3>Business Automation</h3>
-                <p>Streamlining workflows using AI technology.</p>
+                <p>Optimizing workflows and processes using cutting-edge AI and digital transformation strategies.</p>
             </div>
             <div class="service">
                 <h3>Product Development</h3>
-                <p>Creating digital solutions for modern businesses.</p>
+                <p>Designing and deploying innovative digital solutions tailored to business needs.</p>
             </div>
             <div class="service">
                 <h3>AI Research & Policy Analysis</h3>
-                <p>Providing AI-driven insights for business and policymaking.</p>
+                <p>Providing AI-driven insights to influence policy, strategy, and economic decisions.</p>
             </div>
             <div class="service">
                 <h3>Business Case Development</h3>
-                <p>Leading strategic initiatives as the Founder & Research Lead of Pevopod Development.</p>
+                <p>Leading strategic initiatives as the Founder & Research Lead of Pevopod Development, transforming ideas into actionable business models.</p>
             </div>
             <div class="service">
                 <h3>AI-Driven Content & Branding</h3>
-                <p>Leveraging AI for digital content and branding strategies.</p>
+                <p>Using AI to generate compelling content and create data-driven branding strategies.</p>
             </div>
         </div>
     </div>
