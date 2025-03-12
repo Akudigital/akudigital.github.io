@@ -62,96 +62,57 @@
             z-index: 1;
         }
 
-        .container {
-            max-width: 1000px;
+        .profile-card {
             background: white;
-            padding: 50px 20px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-            margin: auto;
-            border: 6px solid;
-            border-image: linear-gradient(to right, #070ADA, #820FC2);
-            border-image-slice: 1;
-            text-align: center;
-        }
-
-        .container h2 {
-            font-size: 60px;
-            font-weight: bold;
-            color: #070ADA;
-            margin-bottom: 20px;
-        }
-
-        .container p {
-            font-size: 22px;
-            color: #333;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.6;
-        }
-
-        .services {
-            padding: 60px;
-            background: linear-gradient(to right, #070ADA, #820FC2);
-            color: white;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 36px;
-            text-decoration: underline;
-            text-decoration-color: transparent;
-            background: linear-gradient(to right, #070ADA, #820FC2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .service-box {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .service {
-            background: white;
-            color: black;
+            width: 350px;
             padding: 20px;
             border-radius: 10px;
-            width: 30%;
             text-align: center;
-            transition: 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 20px;
         }
 
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+        .profile-card h2 {
+            margin-bottom: 5px;
+            color: #070ADA;
         }
 
-        @media screen and (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 50px;
-            }
+        .profile-card p {
+            color: #555;
+            font-size: 16px;
+            margin: 10px 0;
+        }
 
-            .hero-text {
-                width: 100%;
-                padding: 0;
-            }
+        .profile-card .follow-btn {
+            background: #820FC2;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
 
-            .hero img {
-                width: 80%;
-                margin-top: 20px;
-            }
+        .profile-card .follow-btn:hover {
+            background: #070ADA;
+        }
 
-            .hero-placeholder {
-                display: none;
-            }
+        .social-links {
+            margin-top: 15px;
+            font-size: 18px;
+        }
 
-            .service {
-                width: 90%;
-            }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .social-links a:hover {
+            color: #070ADA;
         }
     </style>
 </head>
@@ -172,6 +133,17 @@
         <p><em>Building with AI. Innovating with Purpose. Creating Digital Impact.</em></p>
     </div>
 
+    <div class="profile-card">
+        <h2>Follow My Work</h2>
+        <p>Stay connected and explore my latest projects:</p>
+        <button class="follow-btn" onclick="window.location.href='https://www.instagram.com/gospelmissions/'">Follow Gospel Missions & Relations</button>
+        <div class="social-links">
+            🌐 <a href="https://akudigital.github.io">Website</a><br>
+            🔗 <a href="https://linkedin.com/in/yourprofile">LinkedIn</a><br>
+            📂 <a href="https://pevopod.com">Pevopod Development</a>
+        </div>
+    </div>
+
     <div class="services">
         <h2>The Services I Offer</h2>
         <div class="service-box">
@@ -190,6 +162,10 @@
             <div class="service">
                 <h3>AI Research & Policy Analysis</h3>
                 <p>Providing AI-driven insights for business and policymaking.</p>
+            </div>
+            <div class="service">
+                <h3>Business Case Development</h3>
+                <p>Leading strategic initiatives as the Founder & Research Lead of Pevopod Development.</p>
             </div>
             <div class="service">
                 <h3>AI-Driven Content & Branding</h3>
