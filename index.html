@@ -5,43 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AkuDigital Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+            font-family: 'Intel One Mono', sans-serif;
             margin: 0;
             padding: 0;
             background: white;
         }
-        /* Header Section */
-        .header {
-            background: white;
-            padding: 50px 20px;
-        }
-        .header h1 {
-            color: #070ADA; 
-            font-size: 42px;
-            font-weight: bold;
-        }
-        .header p {
-            font-size: 22px;
-            color: #333;
-        }
-        /* Hero Section */
+
+        /* Heroic Section */
         .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: linear-gradient(to right, #070ADA, #820FC2);
-            padding: 80px;
             color: white;
+            padding: 80px;
+            text-align: left;
         }
-        .hero h1 {
-            font-size: 38px;
-            font-weight: bold;
+
+        .hero-text {
+            max-width: 50%;
+            font-size: 70px;
+            line-height: 77px;
         }
-        .hero p {
-            font-size: 22px;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
+
+        .hero img {
+            max-width: 400px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
         }
+
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-placeholder {
+            position: absolute;
+            background: #070ADA;
+            width: 100%;
+            height: 400px;
+            bottom: 0;
+            z-index: 1;
+            border-radius: 10px;
+        }
+
         /* About Section */
         .container {
             max-width: 1000px;
@@ -57,19 +67,22 @@
             border-image: linear-gradient(to right, #070ADA, #820FC2);
             border-image-slice: 1;
         }
+
         .text-content {
             width: 50%;
             text-align: left;
         }
+
         h2 {
             font-size: 32px;
             color: #820FC2;
         }
+
         p {
             font-size: 22px;
             color: #333;
         }
-        /* Buttons */
+
         .btn {
             display: inline-block;
             margin-top: 20px;
@@ -81,55 +94,48 @@
             border-radius: 10px;
             font-size: 20px;
         }
+
         .btn:hover {
             background-color: #820FC2;
             color: white;
         }
-        /* Image Section Fix */
-        .image-container {
-            width: 45%;
-            position: relative;
-            height: 350px; /* Adjusted Height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        /* Middle Section */
-        .middle-section {
-            background: linear-gradient(to right, #070ADA, #820FC2);
-            padding: 70px;
-            color: white;
-            text-align: center;
-            margin-top: 40px;
-        }
-        /* Skills Section */
-        .skills {
+
+        /* Portfolio Sections */
+        .portfolio-section {
+            padding: 60px;
             background: white;
-            padding: 50px;
             text-align: center;
         }
-        .skills h2 {
+
+        .portfolio-section h2 {
             color: #070ADA;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
         }
-        .skills-list {
+
+        .portfolio-content {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
         }
-        .skill {
-            background: #820FC2;
-            color: white;
-            padding: 15px;
+
+        .portfolio-item {
+            background: #f4f4f4;
+            padding: 20px;
             border-radius: 10px;
-            font-size: 18px;
+            width: 45%;
+            text-align: center;
         }
+
+        .portfolio-item h3 {
+            color: #070ADA;
+        }
+
         /* Services Section */
         .services {
             padding: 60px;
@@ -137,6 +143,7 @@
             color: white;
             text-align: center;
         }
+
         .services h2 {
             font-size: 36px;
             text-decoration: underline;
@@ -145,11 +152,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .service-box {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
+
         .service {
             background: white;
             color: black;
@@ -158,48 +167,23 @@
             width: 30%;
             text-align: center;
         }
-        /* Contact Section */
-        .contact {
-            background: white;
-            padding: 50px;
-            text-align: center;
-        }
-        .contact h2 {
-            color: #070ADA;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: auto;
-            text-align: left;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 2px solid #820FC2;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-        input[type="submit"] {
-            background-color: #99E40A;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        input[type="submit"]:hover {
-            background-color: #070ADA;
-            color: white;
-        }
     </style>
 </head>
 <body>
+
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Welcome to AkuDigital Github Space</h1>
-        <p>I am <strong>Anyaku Alicho Onyebuchi</strong>, a Digital Innovator & AI Strategist.  
-           I explore the intersection of AI, digital transformation, and automation,  
-           turning complex ideas into scalable digital solutions.  
-           <br>Building with AI. Innovating with Purpose. Creating Digital Impact.</p>
+        <div class="hero-text">
+            <h1>Welcome to AkuDigital Github Space</h1>
+            <p>I am <strong>Anyaku Alicho Onyebuchi</strong>, a Digital Innovator & AI Strategist.  
+               I explore the intersection of AI, digital transformation, and automation,  
+               turning complex ideas into scalable digital solutions.  
+               <br>Building with AI. Innovating with Purpose. Creating Digital Impact.</p>
+        </div>
+        <div class="hero-image-container">
+            <div class="hero-placeholder"></div>
+            <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
+        </div>
     </div>
 
     <!-- About Section -->
@@ -209,15 +193,35 @@
             <p>I specialize in AI, digital transformation, and business automation.</p>
             <a href="https://www.linkedin.com/in/anyaku/" class="btn">Connect on LinkedIn</a>
         </div>
-        <div class="image-container">
-            <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
+    </div>
+
+    <!-- Portfolio Sections -->
+    <div class="portfolio-section">
+        <h2>AI & Automation Solutions</h2>
+        <div class="portfolio-content">
+            <div class="portfolio-item">
+                <h3>AI-Powered Business Workflow Automation</h3>
+                <p>Automates business processes to improve efficiency.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>AI Feedback & Decision-Making System</h3>
+                <p>Uses AI to analyze business insights and improve decision-making.</p>
+            </div>
         </div>
     </div>
 
-    <!-- My Work -->
-    <div class="middle-section">
-        <h2>My Work</h2>
-        <p>Discover my latest AI and tech projects.</p>
+    <div class="portfolio-section">
+        <h2>Digital Innovation & Product Development</h2>
+        <div class="portfolio-content">
+            <div class="portfolio-item">
+                <h3>AI-Enhanced Business Strategy Dashboard</h3>
+                <p>Provides real-time analytics to optimize business performance.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>AI-Powered Document & Data Analysis</h3>
+                <p>Extracts key insights from business reports and academic papers.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Services Section -->
@@ -238,5 +242,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
