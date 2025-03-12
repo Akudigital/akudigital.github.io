@@ -26,7 +26,23 @@
             font-size: 22px;
             color: #333;
         }
-        /* Main Container */
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            padding: 80px;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 38px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        /* About Section */
         .container {
             max-width: 1000px;
             display: flex;
@@ -69,25 +85,20 @@
             background-color: #820FC2;
             color: white;
         }
-        /* Image Section */
+        /* Image Section Fix */
         .image-container {
             width: 45%;
             position: relative;
-            height: 300px;
-            background: linear-gradient(to bottom right, #070ADA, #820FC2);
-            border-radius: 10px;
+            height: 350px; /* Adjusted Height */
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .image-container img {
             max-width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
-        }
-        .overlay-text {
-            color: white;
-            font-size: 26px;
-            font-weight: bold;
         }
         /* Middle Section */
         .middle-section {
@@ -128,6 +139,11 @@
         }
         .services h2 {
             font-size: 36px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .service-box {
             display: flex;
@@ -177,10 +193,13 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <h1>Welcome to AkuDigital, a GitHub Space for Anyaku Alicho Onyebuchi.</h1>
-        <p>This is my portfolio website.</p>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to AkuDigital Github Space</h1>
+        <p>I am <strong>Anyaku Alicho Onyebuchi</strong>, a Digital Innovator & AI Strategist.  
+           I explore the intersection of AI, digital transformation, and automation,  
+           turning complex ideas into scalable digital solutions.  
+           <br>Building with AI. Innovating with Purpose. Creating Digital Impact.</p>
     </div>
 
     <!-- About Section -->
@@ -201,20 +220,9 @@
         <p>Discover my latest AI and tech projects.</p>
     </div>
 
-    <!-- Skills Section -->
-    <div class="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">AI & Machine Learning</div>
-            <div class="skill">Digital Automation</div>
-            <div class="skill">UI/UX Design</div>
-            <div class="skill">Business Strategy</div>
-        </div>
-    </div>
-
     <!-- Services Section -->
     <div class="services">
-        <h2>My Services</h2>
+        <h2>The Services I Offer</h2>
         <div class="service-box">
             <div class="service">
                 <h3>AI Development</h3>
@@ -229,17 +237,6 @@
                 <p>Creating digital solutions for modern businesses.</p>
             </div>
         </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="contact">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <input type="submit" value="Send Message">
-        </form>
     </div>
 </body>
 </html>
