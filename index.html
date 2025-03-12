@@ -62,50 +62,28 @@
             z-index: 1;
         }
 
-        .services {
-            padding: 60px;
-            background: linear-gradient(to right, #070ADA, #820FC2);
-            color: white;
+        .about-me {
+            padding: 50px;
             text-align: center;
         }
 
-        .services h2 {
+        .about-me h2 {
             font-size: 36px;
-            text-decoration: underline;
-            text-decoration-color: transparent;
-            background: linear-gradient(to right, #070ADA, #820FC2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .service-box {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .service {
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 10px;
-            width: 45%;
-            text-align: center;
-            transition: 0.3s ease-in-out;
-            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
-            margin: 10px;
-        }
-
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
-        }
-
-        .service i {
-            font-size: 40px;
             color: #070ADA;
-            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .about-text span {
+            font-weight: bold;
+        }
+
+        .highlight-blue { color: #070ADA; }
+        .highlight-purple { color: #820FC2; }
+        .highlight-lemon { color: #99E40A; }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         @media screen and (max-width: 768px) {
@@ -128,10 +106,6 @@
             .hero-placeholder {
                 display: none;
             }
-
-            .service {
-                width: 90%;
-            }
         }
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -145,46 +119,14 @@
         <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
     </div>
 
-    <div class="services">
-        <h2>The Services I Offer</h2>
-        <div class="service-box">
-            <div class="service">
-                <i class="fas fa-robot"></i>
-                <h3>AI Development</h3>
-                <p>Creating AI-powered solutions to enhance business operations and automation.</p>
-                <a href="#">View Case Study</a>
-            </div>
-            <div class="service">
-                <i class="fas fa-cogs"></i>
-                <h3>Business Automation</h3>
-                <p>Optimizing workflows and processes using cutting-edge AI and digital transformation strategies.</p>
-                <a href="#">View Case Study</a>
-            </div>
-            <div class="service">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Product Development</h3>
-                <p>Designing and deploying innovative digital solutions tailored to business needs.</p>
-                <a href="#">View Case Study</a>
-            </div>
-            <div class="service">
-                <i class="fas fa-chart-line"></i>
-                <h3>AI Research & Policy Analysis</h3>
-                <p>Providing AI-driven insights to influence policy, strategy, and economic decisions.</p>
-                <a href="#">View Case Study</a>
-            </div>
-            <div class="service">
-                <i class="fas fa-briefcase"></i>
-                <h3>Business Case Development</h3>
-                <p>Leading strategic initiatives as the Founder & Research Lead of Pevopod Development, transforming ideas into actionable business models.</p>
-                <a href="#">View Case Study</a>
-            </div>
-            <div class="service">
-                <i class="fas fa-bullhorn"></i>
-                <h3>AI-Driven Content & Branding</h3>
-                <p>Using AI to generate compelling content and create data-driven branding strategies.</p>
-                <a href="#">View Case Study</a>
-            </div>
-        </div>
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p class="about-text">
+            I am <span class="highlight-purple">Anyaku Alicho Onyebuchi</span>, a <span class="highlight-blue">Digital Innovator</span> & <span class="highlight-lemon">AI Strategist</span> passionate about leveraging technology to solve complex problems.<br>
+            With expertise in <span class="highlight-blue">AI</span>, <span class="highlight-purple">digital transformation</span>, and <span class="highlight-lemon">automation</span>, I build scalable solutions that drive efficiency and impact.<br>
+            My mission is to bridge the gap between innovation and real-world applications, helping businesses and individuals thrive in a digital-first world.
+        </p>
+        <p class="about-text"><em>Building with <span class="highlight-blue">AI</span>. Innovating with <span class="highlight-purple">Purpose</span>. Creating <span class="highlight-lemon">Digital Impact</span>.</em></p>
     </div>
 </body>
 </html>
