@@ -3,109 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akudigital Portfolio</title>
+    <title>AkuDigital Portfolio</title>
     <style>
+        /* Page Styling */
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            font-family: 'Arial', sans-serif;
             text-align: center;
+            color: white;
             margin: 0;
             padding: 0;
-            background: white; /* White background for first section */
         }
-        .header {
-            background: white;
-            padding: 50px 20px;
-        }
+
+        /* Container for Text & Image */
         .container {
-            max-width: 1000px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: white;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-            margin: auto;
-            border: 6px solid;
-            border-image: linear-gradient(to right, #070ADA, #820FC2); /* Blue to Purple Border */
-            border-image-slice: 1;
-        }
-        .text-content {
-            width: 50%;
-            text-align: left;
-        }
-        h1 {
-            color: #070ADA; /* Bright Blue */
-            font-size: 42px; /* Intel-style large font */
-            font-weight: bold;
-        }
-        h2 {
-            font-size: 32px; /* Bigger subheadings */
-            color: #820FC2; /* Purple */
-        }
-        p {
-            font-size: 22px; /* Larger text for readability */
-            color: #333;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #99E40A; /* Lemon */
-            color: #000000; /* Black text for better contrast */
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
-            font-size: 20px;
-        }
-        .btn:hover {
-            background-color: #820FC2; /* Purple hover effect */
-            color: white;
-        }
-        .image-container {
-            width: 45%;
-            position: relative;
-            height: 300px; /* Fixed height for gradient */
-            background: linear-gradient(to bottom right, #070ADA, #820FC2); /* Gradient Placeholder */
-            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100vh;
+            gap: 40px;
+            padding: 20px;
         }
-        .overlay-text {
-            color: white;
-            font-size: 26px; /* Larger overlay text */
+
+        /* Text Section Styling */
+        .text-section {
+            max-width: 45%;
+            padding: 20px;
+        }
+
+        .text-section h1 {
+            color: #070ADA;
+            font-size: 36px;
+        }
+
+        .text-section p {
+            font-size: 18px;
+        }
+
+        /* LinkedIn Button */
+        .btn {
+            display: inline-block;
+            background-color: #99E40A;
+            color: #070ADA;
             font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
         }
-        .middle-section {
-            background: linear-gradient(to right, #070ADA, #820FC2); /* Updated Gradient */
-            padding: 70px;
-            color: white; /* Text is now white for better visibility */
-            text-align: center;
-            margin-top: 40px;
+
+        .btn:hover {
+            background-color: #7AC000;
+        }
+
+        /* Image Section */
+        .image-section img {
+            max-width: 350px; /* Adjust the size as needed */
+            border-radius: 10px; /* Optional rounded corners */
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-section {
+                max-width: 80%;
+            }
+
+            .image-section img {
+                max-width: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to AkuDigital, a GitLab Space for Anyaku Alicho Onyebuchi.</h1>
-        <p>This is my portfolio website.</p>
-    </div>
 
     <div class="container">
-        <div class="text-content">
-            <h2>About Me</h2>
-            <p>I specialize in AI, digital transformation, and business automation.</p>
+        <!-- Text Section -->
+        <div class="text-section">
+            <h1>Welcome to AkuDigital</h1>
+            <p>A GitHub Space for <strong>Anyaku Alicho Onyebuchi</strong>.</p>
+            <p>Discover my latest AI and tech projects.</p>
             <a href="https://www.linkedin.com/in/anyaku/" class="btn">Connect on LinkedIn</a>
         </div>
-        <div class="image-container">
-            <div class="overlay-text">Image Coming Soon</div>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
         </div>
     </div>
 
-    <div class="middle-section">
-        <h2>My Work</h2>
-        <p>Discover my latest AI and tech projects.</p>
-    </div>
 </body>
 </html>
