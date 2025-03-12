@@ -16,4 +16,233 @@
         }
 
         body {
-            font
+            font-family: "Intel", Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            padding: 100px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            position: relative;
+        }
+
+        .hero-text {
+            width: 50%;
+            padding-left: 50px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            font-weight: bold;
+            line-height: 77px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .hero img {
+            width: 350px;
+            height: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-placeholder {
+            background-color: #070ADA;
+            width: 400px;
+            height: 500px;
+            position: absolute;
+            right: 10%;
+            bottom: 20px;
+            z-index: 1;
+        }
+
+        /* About Me Section */
+        .container {
+            max-width: 1000px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            margin: auto;
+            border: 6px solid;
+            border-image: linear-gradient(to right, #070ADA, #820FC2);
+            border-image-slice: 1;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #070ADA;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            font-size: 24px;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #99E40A;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            background-color: #820FC2;
+            color: white;
+        }
+
+        /* Portfolio Section */
+        .middle-section {
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            padding: 70px;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            color: white;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            background: linear-gradient(to right, #070ADA, #820FC2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #070ADA;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #820FC2;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        input[type="submit"] {
+            background-color: #99E40A;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #070ADA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Welcome to AkuDigital Github Space</h1>
+                    </div>
+        <div class="hero-placeholder"></div>
+        <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
+    </div>
+
+    <!-- About Me Section -->
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am Anyaku Alicho Onyebuchi, a Digital Innovator & AI Strategist.  
+           I explore the intersection of AI, digital transformation, and automation,  
+           turning complex ideas into scalable digital solutions.  
+           <br><br>Building with AI. Innovating with Purpose. Creating Digital Impact.</p>
+    </div>
+
+    <!-- My Work Section -->
+    <div class="middle-section">
+        <h2>My Work</h2>
+        <p>Discover my latest AI and tech projects.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services">
+        <h2>The Services I Offer</h2>
+        <div class="service-box">
+            <div class="service">
+                <h3>AI Development</h3>
+                <p>Building AI-powered tools for businesses.</p>
+            </div>
+            <div class="service">
+                <h3>Business Automation</h3>
+                <p>Streamlining workflows using AI technology.</p>
+            </div>
+            <div class="service">
+                <h3>Product Development</h3>
+                <p>Creating digital solutions for modern businesses.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
