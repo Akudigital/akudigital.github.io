@@ -26,6 +26,9 @@
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
             margin: auto;
+            border: 5px solid;
+            border-image: linear-gradient(to right, #04006E, #820FC2); /* Blue to Purple Border */
+            border-image-slice: 1;
         }
         .text-content {
             width: 50%;
@@ -60,7 +63,49 @@
         .image-container img {
             width: 100%;
             border-radius: 10px;
-            filter: brightness(80%);
+            filter: brightness(90%);
         }
         .overlay-text {
-           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .middle-section {
+            background: linear-gradient(to right, #04006E, #820FC2); /* Blue to Purple */
+            padding: 50px;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Akudigital</h1>
+        <p>This is my portfolio website.</p>
+    </div>
+
+    <div class="container">
+        <div class="text-content">
+            <h2>About Me</h2>
+            <p>I specialize in AI, digital transformation, and business automation.</p>
+            <a href="https://www.linkedin.com/in/anyaku/" class="btn">Connect on LinkedIn</a>
+        </div>
+        <div class="image-container">
+            <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+            <div class="overlay-text">Innovating with AI</div>
+        </div>
+    </div>
+
+    <div class="middle-section">
+        <h2>My Work</h2>
+        <p>Discover my latest AI and tech projects.</p>
+    </div>
+</body>
+</html>
