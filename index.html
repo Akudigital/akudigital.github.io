@@ -17,17 +17,17 @@
             padding: 50px 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
             margin: auto;
-            border: 5px solid;
-            border-image: linear-gradient(to right, #070ADA, #820FC2); /* Updated Blue-to-Purple Border */
+            border: 6px solid;
+            border-image: linear-gradient(to right, #070ADA, #820FC2); /* Blue to Purple Border */
             border-image-slice: 1;
         }
         .text-content {
@@ -35,24 +35,28 @@
             text-align: left;
         }
         h1 {
-            color: #070ADA; /* Brighter Blue */
-            font-size: 28px;
+            color: #070ADA; /* Bright Blue */
+            font-size: 42px; /* Intel-style large font */
             font-weight: bold;
         }
+        h2 {
+            font-size: 32px; /* Bigger subheadings */
+            color: #820FC2; /* Purple */
+        }
         p {
-            font-size: 18px;
+            font-size: 22px; /* Larger text for readability */
             color: #333;
         }
         .btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 12px 25px;
+            padding: 15px 30px;
             background-color: #99E40A; /* Lemon */
             color: #000000; /* Black text for better contrast */
             text-decoration: none;
             font-weight: bold;
-            border-radius: 8px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 20px;
         }
         .btn:hover {
             background-color: #820FC2; /* Purple hover effect */
@@ -61,26 +65,21 @@
         .image-container {
             width: 45%;
             position: relative;
-        }
-        .image-container img {
-            width: 100%;
+            height: 300px; /* Fixed height for gradient */
+            background: linear-gradient(to bottom right, #070ADA, #820FC2); /* Gradient Placeholder */
             border-radius: 10px;
-            filter: brightness(90%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.5);
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
+            font-size: 26px; /* Larger overlay text */
+            font-weight: bold;
         }
         .middle-section {
             background: linear-gradient(to right, #070ADA, #820FC2); /* Updated Gradient */
-            padding: 50px;
+            padding: 70px;
             color: white; /* Text is now white for better visibility */
             text-align: center;
             margin-top: 40px;
@@ -100,8 +99,7 @@
             <a href="https://www.linkedin.com/in/anyaku/" class="btn">Connect on LinkedIn</a>
         </div>
         <div class="image-container">
-            <img src="https://via.placeholder.com/400" alt="Placeholder Image">
-            <div class="overlay-text">Innovating with AI</div>
+            <div class="overlay-text">Image Coming Soon</div>
         </div>
     </div>
 
