@@ -5,66 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AkuDigital Portfolio</title>
 
-    <style>
-        @font-face {
-            font-family: "Intel";
-            src: url("path-to-intel-font.woff2") format("woff2"),
-                 url("path-to-intel-font.woff") format("woff");
-            font-weight: normal;
-            font-style: normal;
-        }
+    <!-- Google Font (Optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <style>
+        /* Global Styles */
         body {
-            font-family: "Intel", Arial, sans-serif;
+            font-family: "Poppins", Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
             background: white;
         }
 
+        /* Hero Section */
         .hero {
-            background: linear-gradient(to right, #070ADA, #820FC2);
-            padding: 100px;
+            background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center/cover;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-align: left;
+            text-align: center;
+            padding: 150px 20px;
             position: relative;
         }
 
-        .hero-text {
-            width: 55%;
-            padding-left: 50px;
-            max-width: 600px;
+        /* Background Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
         }
 
-        .hero h1 {
-            font-size: 70px;
-            font-weight: bold;
-            line-height: 77px;
-        }
-
-        .hero img {
-            width: 350px;
-            height: auto;
+        /* Hero Content */
+        .hero-content {
             position: relative;
             z-index: 2;
         }
 
-        .hero-placeholder {
-            background-color: #070ADA;
-            width: 400px;
-            height: 500px;
-            position: absolute;
-            right: 10%;
-            bottom: 20px;
-            z-index: 1;
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin: 0;
         }
 
+        .hero p {
+            font-size: 24px;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+
+        /* Resume Button */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #070ADA;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #070ADA;
+            border-color: #070ADA;
+        }
+
+        /* About Section */
         .about-me {
-            padding: 50px;
-            text-align: center;
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: auto;
         }
 
         .about-me h2 {
@@ -74,106 +90,127 @@
 
         .about-text {
             font-size: 20px;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            animation: typing 12s steps(80, end) forwards;
+            line-height: 1.6;
         }
 
-        .highlight-blue { color: #070ADA; }
-        .highlight-purple { color: #820FC2; }
-        .highlight-lemon { color: #99E40A; }
-
-        .cv-section {
-            padding: 50px;
+        /* Skills Section */
+        .skills {
             background: #f4f4f4;
-            text-align: center;
+            padding: 60px 20px;
         }
 
-        .cv-header {
-            font-size: 28px;
-            font-weight: bold;
+        .skills h2 {
+            font-size: 32px;
             color: #070ADA;
             margin-bottom: 20px;
         }
 
-        .cv-content {
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
-            font-size: 18px;
-            line-height: 1.6;
-            border-left: 5px solid;
-            border-image: linear-gradient(to bottom, #070ADA, #820FC2);
-            border-image-slice: 1;
-            padding-left: 20px;
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
 
-        .cv-section a {
-            display: inline-block;
+        .skill {
             background: #070ADA;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 20px;
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 10px;
+            padding: 12px 20px;
+            background: #070ADA;
+            color: white;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
             transition: 0.3s;
         }
 
-        .cv-section a:hover {
+        .social-links a:hover {
             background: #820FC2;
         }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        /* Footer */
+        footer {
+            background: #070ADA;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
         }
-            to { width: 100%; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 20px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-text">
-            <h1>Welcome to AkuDigital GitHub Space</h1>
+        <div class="hero-content">
+            <h1>Welcome to AkuDigital</h1>
+            <p>AI Strategist | Digital Innovator | Automation Expert</p>
+            <a href="cv.pdf" download class="btn">Download Resume</a>
         </div>
-        <div class="hero-placeholder"></div>
-        <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Aku%20(2).png?raw=true" alt="Anyaku Alicho Onyebuchi">
     </div>
 
+    <!-- About Me Section -->
     <div class="about-me">
         <h2>About Me</h2>
         <p class="about-text">
-            I am <span class="highlight-purple">Anyaku Alicho Onyebuchi</span>, a <span class="highlight-blue">Digital Innovator</span> & <span class="highlight-lemon">AI Strategist</span> passionate about leveraging technology to solve complex problems.<br>
-            With expertise in <span class="highlight-blue">AI</span>, <span class="highlight-purple">digital transformation</span>, and <span class="highlight-lemon">automation</span>, I build scalable solutions that drive efficiency and impact.<br>
-            My mission is to bridge the gap between innovation and real-world applications, helping businesses and individuals thrive in a digital-first world.
+            I am <strong>Anyaku Alicho Onyebuchi</strong>, a passionate <strong>AI Strategist</strong> and <strong>Digital Innovator</strong>, leveraging technology to solve complex problems.
+            With expertise in <span style="color:#070ADA;">AI</span>, <span style="color:#820FC2;">digital transformation</span>, and <span style="color:#99E40A;">automation</span>, 
+            I help businesses scale and innovate in the digital-first world.
         </p>
     </div>
 
-    <div class="cv-section">
-        <h2 class="cv-header">My Resume</h2>
-        <div class="cv-content">
-            <p><strong>Experience:</strong><br>
-                - Founder & Research Lead at Pevopod<br>
-                - Founder & Digital Strategist at Anyaku Alicho Limited (since 2020)<br>
-                - AI & Business Strategist | Digital Transformation Expert<br>
-                - Strategic Business Leadership and Automation</p>
-            <p><strong>Education:</strong><br>
-                - MSc International Business, MBA<br>
-                - Certificate in Master Digital Transformation</p>
-            <p><strong>Skills:</strong><br>
-                - AI Development | Business Automation | Digital Product Development<br>
-                - Research & Policy Analysis | Strategic Business Leadership<br>
-                - UI/UX Design | Data Analytics</p>
-            <p><strong>Projects:</strong><br>
-                - Pevopod: AI-driven digital engagement platform for policy and research insights.<br>
-                - Digital Banking Strategy: Led digital adoption & automation for financial services.<br>
-                - AI-powered Market Research Tools: Built solutions for strategic decision-making.<br>
-                - Digital Branding & UX Projects: Developed interactive and accessible digital spaces.</p>
+    <!-- Skills Section -->
+    <div class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-list">
+            <div class="skill">Artificial Intelligence</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Deep Learning</div>
+            <div class="skill">Business Automation</div>
+            <div class="skill">Data Analytics</div>
+            <div class="skill">UI/UX Design</div>
+            <div class="skill">Strategic Leadership</div>
         </div>
-        <br>
-        <a href="cv.pdf" download>Download Full CV</a>
     </div>
+
+    <!-- Social Links -->
+    <div class="social-links">
+        <a href="https://github.com/Akudigital" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 AkuDigital. All rights reserved.
+    </footer>
+
 </body>
 </html>
