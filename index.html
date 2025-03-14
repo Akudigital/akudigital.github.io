@@ -5,17 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AkuDigital Portfolio</title>
 
-    <!-- Google Font (Optional) -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         /* Global Styles */
         body {
             font-family: "Poppins", Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             background: white;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #070ADA;
+            font-weight: 600;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #820FC2;
         }
 
         /* Hero Section */
@@ -25,9 +49,9 @@
             text-align: center;
             padding: 150px 20px;
             position: relative;
+            margin-top: 70px;
         }
 
-        /* Background Overlay */
         .hero::before {
             content: "";
             position: absolute;
@@ -38,7 +62,6 @@
             background: rgba(0, 0, 0, 0.6);
         }
 
-        /* Hero Content */
         .hero-content {
             position: relative;
             z-index: 2;
@@ -52,11 +75,10 @@
 
         .hero p {
             font-size: 24px;
-            margin: 10px 0;
             font-weight: 300;
+            margin: 10px 0;
         }
 
-        /* Resume Button */
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -81,6 +103,7 @@
             padding: 80px 20px;
             max-width: 900px;
             margin: auto;
+            text-align: center;
         }
 
         .about-me h2 {
@@ -93,36 +116,35 @@
             line-height: 1.6;
         }
 
-        /* Skills Section */
-        .skills {
-            background: #f4f4f4;
+        /* CV Section */
+        .cv-section {
             padding: 60px 20px;
+            background: #f4f4f4;
+            text-align: center;
         }
 
-        .skills h2 {
-            font-size: 32px;
+        .cv-header {
+            font-size: 28px;
+            font-weight: bold;
             color: #070ADA;
             margin-bottom: 20px;
         }
 
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .skill {
-            background: #070ADA;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
+        .cv-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
             font-size: 18px;
-            font-weight: bold;
+            line-height: 1.6;
+            border-left: 5px solid;
+            border-image: linear-gradient(to bottom, #070ADA, #820FC2);
+            border-image-slice: 1;
+            padding-left: 20px;
         }
 
         /* Social Links */
         .social-links {
+            text-align: center;
             margin-top: 30px;
         }
 
@@ -163,10 +185,24 @@
             .hero p {
                 font-size: 20px;
             }
+
+            .navbar a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+    </div>
 
     <!-- Hero Section -->
     <div class="hero">
@@ -178,38 +214,44 @@
     </div>
 
     <!-- About Me Section -->
-    <div class="about-me">
+    <div id="about" class="about-me">
         <h2>About Me</h2>
         <p class="about-text">
-            I am <strong>Anyaku Alicho Onyebuchi</strong>, a passionate <strong>AI Strategist</strong> and <strong>Digital Innovator</strong>, leveraging technology to solve complex problems.
-            With expertise in <span style="color:#070ADA;">AI</span>, <span style="color:#820FC2;">digital transformation</span>, and <span style="color:#99E40A;">automation</span>, 
-            I help businesses scale and innovate in the digital-first world.
+            I am <strong>Anyaku Alicho Onyebuchi</strong>, a passionate <strong>AI Strategist</strong> and <strong>Digital Innovator</strong>.
+            With expertise in AI, digital transformation, and automation, I help businesses scale in the digital-first world.
         </p>
     </div>
 
-    <!-- Skills Section -->
-    <div class="skills">
-        <h2>My Skills</h2>
-        <div class="skill-list">
-            <div class="skill">Artificial Intelligence</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Deep Learning</div>
-            <div class="skill">Business Automation</div>
-            <div class="skill">Data Analytics</div>
-            <div class="skill">UI/UX Design</div>
-            <div class="skill">Strategic Leadership</div>
+    <!-- CV Section -->
+    <div id="experience" class="cv-section">
+        <h2 class="cv-header">My Resume</h2>
+        <div class="cv-content">
+            <p><strong>Experience:</strong><br>
+                - Founder & Research Lead at Pevopod<br>
+                - Founder & Digital Strategist at Anyaku Alicho Limited<br>
+                - AI & Business Strategist | Digital Transformation Expert
+            </p>
+            <p><strong>Education:</strong><br>
+                - MSc International Business, MBA<br>
+                - Certificate in Master Digital Transformation
+            </p>
+            <p><strong>Skills:</strong><br>
+                - AI Development | Business Automation | Digital Product Development<br>
+                - Research & Policy Analysis | Strategic Business Leadership
+            </p>
         </div>
     </div>
 
     <!-- Social Links -->
     <div class="social-links">
+        <a href="https://www.linkedin.com/in/anyaku/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/gospelmissions/" target="_blank">Gospel Missions</a>
         <a href="https://github.com/Akudigital" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
     </div>
 
     <!-- Footer -->
     <footer>
-        &copy; 2024 AkuDigital. All rights reserved.
+        &copy; 2025 AkuDigital. All rights reserved.
     </footer>
 
 </body>
