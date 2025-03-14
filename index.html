@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | AI Strategist & Business Innovator</title>
+    <title>Anyaku Alicho Onyebuchi | AI Strategist & Digital Innovator</title>
 
     <!-- SEO Optimization -->
-    <meta name="description" content="AI Strategist & Business Innovator specializing in digital transformation, automation, and AI-powered solutions.">
-    <meta name="keywords" content="AI, Business Automation, Machine Learning, Digital Transformation, Cloud, API">
-    <meta name="author" content="Your Name">
+    <meta name="description" content="Director of Business Systems & Digital Strategy | AI Researcher | Digital Transformation Specialist.">
+    <meta name="keywords" content="AI, Machine Learning, Business Automation, Digital Transformation, Cloud, GitHub Portfolio">
+    <meta name="author" content="Anyaku Alicho Onyebuchi">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -40,13 +40,6 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #070ADA;
-            text-decoration: none;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -57,7 +50,6 @@
             text-decoration: none;
             color: #070ADA;
             font-weight: 600;
-            transition: 0.3s;
         }
 
         .nav-links a:hover {
@@ -66,17 +58,31 @@
 
         /* Hero Section */
         .hero {
+            text-align: center;
+            padding: 100px 20px;
             background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center/cover;
             color: white;
-            text-align: center;
-            padding: 150px 20px;
             position: relative;
             margin-top: 60px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes it circular */
+            border: 3px solid #070ADA;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05); /* Slight zoom effect */
         }
 
         .hero h1 {
             font-size: 50px;
             font-weight: 700;
+            margin-top: 10px;
         }
 
         .hero p {
@@ -84,157 +90,59 @@
             font-weight: 300;
         }
 
-        /* Sections */
-        .section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .section h2 {
-            font-size: 32px;
-            color: #070ADA;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: #f4f4f4;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .skill {
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
             background: #070ADA;
             color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
             transition: 0.3s;
         }
 
-        .skill:hover {
-            background: #820FC2;
-        }
-
-        /* Experience Section */
-        .cv-section {
-            background: #f9f9f9;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .cv-content {
-            max-width: 900px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
-            padding-left: 20px;
-            border-left: 5px solid;
-            border-image: linear-gradient(to bottom, #070ADA, #820FC2);
-            border-image-slice: 1;
-        }
-
-        /* Blog Section */
-        .blog {
-            padding: 50px 20px;
+        .btn:hover {
             background: white;
-            text-align: center;
+            color: #070ADA;
         }
 
-        .blog-list {
-            max-width: 900px;
-            margin: auto;
-            text-align: left;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
         }
-
-        .blog-item {
-            margin-bottom: 20px;
-            padding: 20px;
-            background: #f4f4f4;
-            border-radius: 8px;
-        }
-
-        /* Footer */
-        footer {
-            background: #070ADA;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            margin-top: 50px;
-        }
-
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <a href="#" class="logo">Your Name</a>
+        <a href="#" class="logo">Anyaku Alicho Onyebuchi</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
-        <h1>Your Name</h1>
-        <p>AI Strategist | Business Automation | Digital Transformation</p>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>[Your professional bio goes here]</p>
+    <section id="home" class="hero">
+        <img src="https://github.com/Akudigital/akudigital.github.io/blob/main/Akudigital.png?raw=true" 
+             alt="Anyaku Alicho Onyebuchi" 
+             class="profile-img">
+        <h1>Anyaku Alicho Onyebuchi</h1>
+        <p>Director of Business Systems & Digital Strategy | AI Researcher | Digital Transformation Specialist</p>
+        <a href="#contact" class="btn">Get in Touch</a>
     </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Technical & Business Expertise</h2>
-        <div class="skill-list">
-            <span class="skill">[Skill 1]</span>
-            <span class="skill">[Skill 2]</span>
-            <span class="skill">[Skill 3]</span>
-            <span class="skill">[Skill 4]</span>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="cv-section">
-        <h2>Professional Experience</h2>
-        <div class="cv-content">
-            <p>[Your Experience Details]</p>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <h2>Latest Blog Posts</h2>
-        <div class="blog-list">
-            <div class="blog-item">
-                <h3>[Blog Post Title]</h3>
-                <p>[Short description]</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Your Name. All rights reserved.
-    </footer>
 
 </body>
 </html>
